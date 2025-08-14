@@ -8,6 +8,11 @@ import java.util.*;
  */
 public class Titular {
 
+    @Override
+    public String toString() {
+        return "Titular{" + "id=" + id + ", nombre=" + nombre + ", fechaNac=" + fechaNac + '}';
+    }
+
     public String getId() {
         return id;
     }

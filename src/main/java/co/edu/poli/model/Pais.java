@@ -8,6 +8,11 @@ import java.util.*;
  */
 public class Pais {
 
+    @Override
+    public String toString() {
+        return "Pais{" + "codigo=" + codigo + ", nombre=" + nombre + ", ciudad=" + ciudad + '}';
+    }
+
     public String getCodigo() {
         return codigo;
     }

@@ -8,6 +8,11 @@ import java.util.*;
  */
 public class Ciudad {
 
+    @Override
+    public String toString() {
+        return "Ciudad{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
+    }
+
     public String getCodigo() {
         return codigo;
     }
@@ -45,6 +50,6 @@ public class Ciudad {
      */
     private String nombre;
 
-
+    
 
 }

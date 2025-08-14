@@ -8,6 +8,11 @@ import java.util.*;
  */
 public class Visa {
 
+    @Override
+    public String toString() {
+        return "Visa{" + "num=" + num + ", pais=" + pais + ", mulEntry=" + mulEntry + ", pasaporte=" + pasaporte + '}';
+    }
+
     public Visa(String num, Pais pais, int mulEntry, Pasaporte pasaporte) {
         this.num = num;
         this.pais = pais;

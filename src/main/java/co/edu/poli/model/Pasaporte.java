@@ -4,9 +4,27 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class Pasaporte {
+
+    @Override
+    public String toString() {
+        return "Pasaporte{" + "id=" + id + ", fechaExp=" + fechaExp + ", titular=" + titular + ", pais=" + pais + '}';
+    }
+
+    private String id;
+    private String fechaExp;
+    private Titular titular;    
+    private Pais pais;
+    
+
+    public Pasaporte(String id, String fechaExp, Titular titular, Pais pais) {
+        this.id = id;
+        this.fechaExp = fechaExp;
+        this.titular = titular;
+        this.pais = pais;
+    }
 
     public String getId() {
         return id;
@@ -40,40 +58,12 @@ public class Pasaporte {
         this.pais = pais;
     }
 
-    public Pasaporte(String id, String fechaExp, Titular titular, Pais pais) {
-        this.id = id;
-        this.fechaExp = fechaExp;
-        this.titular = titular;
-        this.pais = pais;
-    }
-
-    /**
-     * Default constructor
-     */
+    
+    
     public Pasaporte() {
     }
 
     /**
-     * 
+     *
      */
-    private String id;
-
-    /**
-     * 
-     */
-    private String fechaExp;
-
-    /**
-     * 
-     */
-    private Titular titular;
-
-    /**
-     * 
-     */
-    private Pais pais;
-
-
-
-
 }
