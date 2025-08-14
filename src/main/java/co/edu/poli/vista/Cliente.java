@@ -21,7 +21,7 @@ public class Cliente {
         ArrayList <Ciudad> ciudades = new ArrayList <Ciudad>();
         ciudades.add(new Ciudad ("1", "Bogota"));     
              
-       Titular Carla = new Titular ("1000528724", "Carla Lopez", "10-08-2005");
+       Titular Carla = new Titular ("1000527724", "Carla Lopez", "10-08-2005");
        Pais Colombia = new Pais ("12", "Colombia", ciudades);
         
        Pasaporte pasaporte_1 = new Pasaporte("ax123", "12-08-2020", Carla, Colombia);
