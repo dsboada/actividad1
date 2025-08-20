@@ -4,13 +4,16 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class Ciudad {
 
-    @Override
-    public String toString() {
-        return "Ciudad{" + "codigo=" + codigo + ", nombre=" + nombre + '}';
+    private String codigo;
+    private String nombre;
+
+    public Ciudad(String codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
     }
 
     public String getCodigo() {
@@ -29,26 +32,10 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
-    public Ciudad(String codigo, String nombre) {
-        this.codigo = codigo;
-        this.nombre = nombre;
+    @Override
+    public String toString() {
+        return "Codigo: " + codigo + ", Nombre: " + nombre ;
     }
-
-    /**
-     * Default constructor
-     */
-    public Ciudad() {
-    }
-
-    /**
-     * 
-     */
-    private String codigo;
-
-    /**
-     * 
-     */
-    private String nombre;
 
     
 

@@ -4,13 +4,18 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class Pais {
 
-    @Override
-    public String toString() {
-        return "Pais{" + "codigo=" + codigo + ", nombre=" + nombre + ", ciudad=" + ciudad + '}';
+    private String codigo;
+    private String nombre;
+    private List<Ciudad> ciudad;
+
+    public Pais(String codigo, String nombre, List<Ciudad> ciudad) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.ciudad = ciudad;
     }
 
     public String getCodigo() {
@@ -37,35 +42,9 @@ public class Pais {
         this.ciudad = ciudad;
     }
 
-    public Pais(String codigo, String nombre, List<Ciudad> ciudad) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.ciudad = ciudad;
+    @Override
+    public String toString() {
+        return "(Codigo: " + codigo + ", Nombre: " + nombre + ", Ciudad: " + ciudad + ')';
     }
-
-    /**
-     * Default constructor
-     */
-    public Pais() {
-    }
-
-    /**
-     * 
-     */
-    private String codigo;
-
-    /**
-     * 
-     */
-    private String nombre;
-
-    /**
-     * 
-     */
-    private List<Ciudad> ciudad;
-
-
-
-
 
 }

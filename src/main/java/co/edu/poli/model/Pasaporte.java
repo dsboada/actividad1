@@ -8,16 +8,10 @@ import java.util.*;
  */
 public class Pasaporte {
 
-    @Override
-    public String toString() {
-        return "Pasaporte{" + "id=" + id + ", fechaExp=" + fechaExp + ", titular=" + titular + ", pais=" + pais + '}';
-    }
-
     private String id;
     private String fechaExp;
-    private Titular titular;    
+    private Titular titular;
     private Pais pais;
-    
 
     public Pasaporte(String id, String fechaExp, Titular titular, Pais pais) {
         this.id = id;
@@ -58,12 +52,9 @@ public class Pasaporte {
         this.pais = pais;
     }
 
-    
-    
-    public Pasaporte() {
+    @Override
+    public String toString() {
+        return "Pasaporte:{" + "id: " + id + ", Fecha Exp: " + fechaExp + ", Titular:" + titular + ", Pais:" + pais + '}';
     }
 
-    /**
-     *
-     */
 }

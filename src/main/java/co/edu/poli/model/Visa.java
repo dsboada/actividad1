@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 
+ *
  */
 public class Visa {
 
-    @Override
-    public String toString() {
-        return "Visa{" + "num=" + num + ", pais=" + pais + ", mulEntry=" + mulEntry + ", pasaporte=" + pasaporte + '}';
-    }
+    private String num;
+    private Pais pais;
+    private int mulEntry;
+    private Pasaporte pasaporte;
 
     public Visa(String num, Pais pais, int mulEntry, Pasaporte pasaporte) {
         this.num = num;
@@ -52,32 +52,9 @@ public class Visa {
         this.pasaporte = pasaporte;
     }
 
-    /**
-     * Default constructor
-     */
-    public Visa() {
+    @Override
+    public String toString() {
+        return "Visa{" + "num=" + num + ", pais=" + pais + ", mulEntry=" + mulEntry + ", pasaporte=" + pasaporte + '}';
     }
-
-    /**
-     * 
-     */
-    private String num;
-
-    /**
-     * 
-     */
-    private Pais pais;
-
-    /**
-     * 
-     */
-    private int mulEntry;
-
-    /**
-     * 
-     */
-    private Pasaporte pasaporte;
-
-
 
 }
