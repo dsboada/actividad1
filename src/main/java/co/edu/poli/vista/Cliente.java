@@ -40,19 +40,19 @@ public class Cliente {
         
         //Actualizar
         
-        
+        /*
         
         titular_1.setNombre("Daniela Boada"); // Cambiamos fecha
         String resultadoUpdate = PasaporteRepo.actualizar(pasaporte_1);
         System.out.println(resultadoUpdate);
         
-        
+        */
         
         //eliminar
         
         /*
         
-        String resultadoDelete = PasaporteRepo.eliminar("P67342");
+        String resultadoDelete = PasaporteRepo.eliminar("P5478");
         System.out.println(resultadoDelete);
         
         */
@@ -61,7 +61,7 @@ public class Cliente {
         
         /*
         
-        Pasaporte encontrado = PasaporteRepo.selectId("P67342"); 
+        Pasaporte encontrado = PasaporteRepo.selectId("P43562"); 
         if (encontrado != null) {
             System.out.println("ID: " + encontrado.getId());
             System.out.println("Fecha Exp: " + encontrado.getFechaExp());

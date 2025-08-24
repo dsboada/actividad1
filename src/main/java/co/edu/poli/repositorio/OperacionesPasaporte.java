@@ -93,8 +93,8 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
         try (Connection conn = ConexionSupabase.getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, entidad.getFechaExp());
-            pstmt.setString(2, entidad.getTitular().toString());
-            pstmt.setString(3, entidad.getPais().toString());
+            pstmt.setString(2, entidad.getTitular().getNombre());
+            pstmt.setString(3, entidad.getPais().getNombre());
             pstmt.setString(4, entidad.getId());
 
             int filasAfectadas = pstmt.executeUpdate();
