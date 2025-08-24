@@ -1,7 +1,6 @@
 
 package co.edu.poli.model;
 
-
 public class PruebaBaseDeDatos {
     private String PasaporteId;
     private String FechaExp;

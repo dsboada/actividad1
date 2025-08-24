@@ -35,7 +35,7 @@ public class Cliente {
         RepositorioPasaporte repo = new RepositorioPasaporte();
 
         repo.insertarPasaporte(
-            "P12345",        // PasaporteId
+            "P09876",        // PasaporteId
             "2025-08-23",    // FechaExp
             "David Pardo",   // Titular
             "Colombia",      // Pais
