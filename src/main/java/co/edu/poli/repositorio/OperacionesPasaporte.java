@@ -134,7 +134,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
         }
 
     } catch (SQLException e) {
-        System.out.println("❌ Error al listar: " + e.getMessage());
+        System.out.println("Error al listar: " + e.getMessage());
     }
 
     return lista;

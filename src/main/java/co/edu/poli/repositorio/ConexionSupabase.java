@@ -17,9 +17,9 @@ public class ConexionSupabase {
 
 	            // Conexión a Supabase
 	            conn = DriverManager.getConnection(URL, USER, PASSWORD);
-	            System.out.println("✅ Conexión exitosa a Supabase");
+	            System.out.println("Conexion exitosa a Supabase");
 	        } catch (ClassNotFoundException | SQLException e) {
-	            System.out.println("❌ Error de conexión: " + e.getMessage());
+	            System.out.println("Error de conexion: " + e.getMessage());
 	        }
 	        return conn;
 	    }

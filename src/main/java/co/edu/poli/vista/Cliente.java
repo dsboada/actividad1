@@ -66,7 +66,7 @@ public class Cliente {
             System.out.println("ID: " + encontrado.getId());
             System.out.println("Fecha Exp: " + encontrado.getFechaExp());
             System.out.println("Titular: " + encontrado.getTitular().getNombre());
-            System.out.println("País: " + encontrado.getPais().getNombre());
+            System.out.println("Pais: " + encontrado.getPais().getNombre());
         } else {
             System.out.println("Pasaporte no encontrado.");
         }
@@ -82,7 +82,7 @@ public class Cliente {
             System.out.println("ID: " + p.getId() +
                     ", Fecha Exp: " + p.getFechaExp() +
                     ", Titular: " + p.getTitular().getNombre() +
-                    ", País: " + p.getPais().getNombre());
+                    ", Pais: " + p.getPais().getNombre());
         }
         
         */
