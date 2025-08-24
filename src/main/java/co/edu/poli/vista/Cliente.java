@@ -75,7 +75,7 @@ public class Cliente {
         
         //SelectAll
         
-        /*
+        
         
         System.out.println("Lista de pasaportes:");
         for (Pasaporte p : PasaporteRepo.selectAll()) {
@@ -85,7 +85,7 @@ public class Cliente {
                     ", Pais: " + p.getPais().getNombre());
         }
         
-        */
+        
 
     }
 
