@@ -1,18 +1,14 @@
 package co.edu.poli.model;
 
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
 
-/**
- *
- */
 public class Pais {
 
     private String codigo;
     private String nombre;
-    private List<Ciudad> ciudad;
+    private ArrayList<Ciudad> ciudad;
 
-    public Pais(String codigo, String nombre, List<Ciudad> ciudad) {
+    public Pais(String codigo, String nombre, ArrayList<Ciudad> ciudad) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.ciudad = ciudad;
@@ -34,11 +30,11 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public List<Ciudad> getCiudad() {
+    public ArrayList<Ciudad> getCiudad() {
         return ciudad;
     }
 
-    public void setCiudad(List<Ciudad> ciudad) {
+    public void setCiudad(ArrayList<Ciudad> ciudad) {
         this.ciudad = ciudad;
     }
 

@@ -1,11 +1,6 @@
 package co.edu.poli.model;
 
-import java.io.*;
-import java.util.*;
 
-/**
- *
- */
 public class Pasaporte {
 
     private String id;
