@@ -20,26 +20,48 @@ public class Cliente {
 
         //Se crean las descripciones de los atributos del pasaporte 
         ArrayList<Ciudad> ciudades = new ArrayList<Ciudad>();
-        ciudades.add(new Ciudad("1", "Bogota"));
-        Titular titular_1 = new Titular("1000527724", "Martin Gomez", "10-08-2005");
-        Pais pais_1 = new Pais("12", "Colombia", ciudades);
+        ciudades.add(new Ciudad("3", "Medellin"));
+        Titular titular_1 = new Titular("1523766324", "Sophia Quintero", "27-08-2005");
+        Pais pais_1 = new Pais("32", "Suecia", ciudades);
        
         //Se crea el objeto pasaporte
-        Pasaporte pasaporte_1 = new Pasaporte("P67342", "12-08-2020", titular_1, pais_1);
+        Pasaporte pasaporte_1 = new Pasaporte("P43562", "13-05-2021", titular_1, pais_1);
 
         //CRUD
+        
         //Insertar
+        
+        /*
+        
         String insertarPasaporte = PasaporteRepo.insertar(pasaporte_1);
-        System.out.println(insertarPasaporte);
+        System.out.println(insertarPasaporte);/*
+        
+        */
+        
         //Actualizar
-        /*pasaporte_1.setFechaExp("2026-01-01"); // Cambiamos fecha
+        
+        
+        
+        titular_1.setNombre("Daniela Boada"); // Cambiamos fecha
         String resultadoUpdate = PasaporteRepo.actualizar(pasaporte_1);
-        System.out.println(resultadoUpdate);*/
+        System.out.println(resultadoUpdate);
+        
+        
+        
         //eliminar
-        /*String resultadoDelete = PasaporteRepo.eliminar("P67342");
-        System.out.println(resultadoDelete);*/
+        
+        /*
+        
+        String resultadoDelete = PasaporteRepo.eliminar("P67342");
+        System.out.println(resultadoDelete);
+        
+        */
+        
         //SelectId
-        /*Pasaporte encontrado = PasaporteRepo.selectId("P67342"); 
+        
+        /*
+        
+        Pasaporte encontrado = PasaporteRepo.selectId("P67342"); 
         if (encontrado != null) {
             System.out.println("ID: " + encontrado.getId());
             System.out.println("Fecha Exp: " + encontrado.getFechaExp());
@@ -47,15 +69,23 @@ public class Cliente {
             System.out.println("País: " + encontrado.getPais().getNombre());
         } else {
             System.out.println("Pasaporte no encontrado.");
-        }*/
+        }
+        
+        */
+        
         //SelectAll
-        /*System.out.println("Lista de pasaportes:");
+        
+        /*
+        
+        System.out.println("Lista de pasaportes:");
         for (Pasaporte p : PasaporteRepo.selectAll()) {
             System.out.println("ID: " + p.getId() +
                     ", Fecha Exp: " + p.getFechaExp() +
                     ", Titular: " + p.getTitular().getNombre() +
                     ", País: " + p.getPais().getNombre());
-        }*/
+        }
+        
+        */
 
     }
 
