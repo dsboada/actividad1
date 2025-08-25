@@ -25,7 +25,7 @@ public class Cliente {
         Pais pais_1 = new Pais("20", "Peru", ciudades);
 
         //Se crea el objeto pasaporte
-        Pasaporte pasaporte_1 = new Pasaporte("A7452", "10-05-2025", titular_1, pais_1);
+        Pasaporte pasaporte_1 = new Pasaporte("A745555552", "10-05-2025", titular_1, pais_1);
 
         //CRUD
         //Insertar
