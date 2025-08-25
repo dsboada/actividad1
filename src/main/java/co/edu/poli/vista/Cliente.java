@@ -58,7 +58,9 @@ public class Cliente {
         Pasaporte encontrado = PasaporteRepo.selectId("P43562"); 
         if (encontrado != null) {
             System.out.println("ID: " + encontrado.getId());
-            System.out.println("Fecha Exp: " + encontrado.getFechaExp());
+            System.out.println("Fecha Exp: " + encontrad() +
+                    ", Pais: " + p.getPais().getNombre());
+        }o.getFechaExp());
             System.out.println("Titular: " + encontrado.getTitular().getNombre());
             System.out.println("Pais: " + encontrado.getPais().getNombre());
         } else {
@@ -72,9 +74,7 @@ public class Cliente {
         for (Pasaporte p : PasaporteRepo.selectAll()) {
             System.out.println("ID: " + p.getId() +
                     ", Fecha Exp: " + p.getFechaExp() +
-                    ", Titular: " + p.getTitular().getNombre() +
-                    ", Pais: " + p.getPais().getNombre());
-        }
+                    ", Titular: " + p.getTitular().getNombre
          */
     }
 
