@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionSupabase {
-     private static final String URL = "jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres";
+    
+	    
+    private static final String URL = "jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres";
 	    private static final String USER = "postgres.xvmzjfegsbnyuxesymol";
-	    private static final String PASSWORD = "iCoBeDZ86k0kEALv";
+	    private static final String PASSWORD = "Pw8SFO00OJx5dJ7k";
 
 	    public static Connection getConnection() {
 	        Connection conn = null;
@@ -23,6 +25,4 @@ public class ConexionSupabase {
 	        }
 	        return conn;
 	    }
-
-
 }
