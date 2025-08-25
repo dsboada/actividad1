@@ -21,17 +21,16 @@ public class Cliente {
         //Se crean las descripciones de los atributos del pasaporte 
         ArrayList<Ciudad> ciudades = new ArrayList<Ciudad>();
         ciudades.add(new Ciudad("4", "Tunja"));
-        Titular titular_1 = new Titular("1078564320", "Santiago Medina", "13-05-2001");
-        Pais pais_1 = new Pais("20", "Colombia", ciudades);
+        Titular titular_1 = new Titular("1078564320", "Camila Ruiz", "13-05-2001");
+        Pais pais_1 = new Pais("20", "Peru", ciudades);
 
         //Se crea el objeto pasaporte
-        Pasaporte pasaporte_1 = new Pasaporte("P12542", "09-05-2020", titular_1, pais_1);
+        Pasaporte pasaporte_1 = new Pasaporte("A7452", "10-05-2025", titular_1, pais_1);
 
         //CRUD
         //Insertar
         String insertarPasaporte = PasaporteRepo.insertar(pasaporte_1);
-        System.out.println(insertarPasaporte);/*
-        
+        System.out.println(insertarPasaporte);        
         
         
         //Actualizar
