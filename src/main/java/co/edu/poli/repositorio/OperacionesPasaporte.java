@@ -17,7 +17,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
         String sql = "INSERT INTO bdpasaporte (pasaporteid, fechaexp, titular, pais) " + "VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = ConexionSupabase.getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, entidad.getId());
             pstmt.setString(2, entidad.getFechaExp());
@@ -42,7 +42,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
         String sql = "DELETE FROM BdPasaporte WHERE \"pasaporteid\" = ?";
 
-        try (Connection conn = ConexionSupabase.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, pasaporteId);
 
             int filasEliminadas = stmt.executeUpdate();
@@ -64,7 +64,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
         String sql = "SELECT * FROM BdPasaporte WHERE PasaporteId = ?";
         Pasaporte pasaporteBuscado = null;
 
-        try (Connection conn = ConexionSupabase.getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, PasaporteId);
             ResultSet rs = pstmt.executeQuery();
@@ -91,7 +91,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
         String sql = "UPDATE BdPasaporte SET FechaExp=?, Titular=?, Pais=? WHERE PasaporteId=?";
 
-        try (Connection conn = ConexionSupabase.getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, entidad.getFechaExp());
             pstmt.setString(2, entidad.getTitular().getNombre());
             pstmt.setString(3, entidad.getPais().getNombre());
@@ -115,7 +115,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
         String sql = "SELECT * FROM bdpasaporte";
         ArrayList<Pasaporte> lista = new ArrayList<>();
 
-    try (Connection conn = ConexionSupabase.getConnection();
+    try (Connection conn = ConexionSupabase.getInstance().getConnection();
          PreparedStatement pstmt = conn.prepareStatement(sql);
          ResultSet rs = pstmt.executeQuery()) {
 
