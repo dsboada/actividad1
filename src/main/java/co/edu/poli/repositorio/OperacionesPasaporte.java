@@ -138,7 +138,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
     @Override
     public ArrayList<Pasaporte> filterId(String ident) {
 
-        ArrayList<Pasaporte> pasaportes_filtrados = new ArrayList<Pasaporte>();
+        ArrayList<Pasaporte> pasaportes_filtrados = new ArrayList<>();
         String sql = "SELECT * FROM bdpasaporte WHERE pasaporteid LIKE ?";
 
         try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
