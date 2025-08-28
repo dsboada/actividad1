@@ -69,14 +69,12 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                Titular titularbuscado = new Titular(null, rs.getString("titular"), null);
-                Pais paisbuscado = new Pais(null, rs.getString("pais"), null);
+                //Titular titularbuscado = new Titular(null, rs.getString("titular"), null);
+                //Pais paisbuscado = new Pais(null, rs.getString("pais"), null);
 
                 pasaporteBuscado = new Pasaporte(
                         rs.getString("pasaporteid"),
-                        rs.getString("fechaexp"),
-                        titularbuscado,
-                        paisbuscado);
+                        rs.getString("fechaexp"), null, null);          
             }
 
         } catch (SQLException e) {
@@ -117,14 +115,14 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
         try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
 
             while (rs.next()) {
-                Titular titular = new Titular(null, rs.getString("titular"), null);
-                Pais pais = new Pais(null, rs.getString("pais"), null);
+                //Titular titular = new Titular(null, rs.getString("titular"), null);
+                //Pais pais = new Pais(null, rs.getString("pais"), null);
 
                 Pasaporte pasaporte = new Pasaporte(
                         rs.getString("pasaporteid"),
                         rs.getString("fechaexp"),
-                        titular,
-                        pais
+                        null,
+                        null
                 );
 
                 lista.add(pasaporte);

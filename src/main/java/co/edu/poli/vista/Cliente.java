@@ -25,7 +25,7 @@ public class Cliente {
         Pais pais_1 = new Pais("20", "Peru", ciudades);
 
         //Se crea el objeto pasaporte
-        Pasaporte pasaporte_1 = new Pasaporte("SDE3456", "10-05-2545", titular_1, pais_1);
+        Pasaporte pasaporte_1 = new Pasaporte("547463", "10-05-2545", titular_1, pais_1);
         //CRUD
 
         //Insertar
@@ -35,7 +35,7 @@ public class Cliente {
         String insertarPasaporte = PasaporteRepo.insertar(pasaporte_1);
         System.out.println(insertarPasaporte);
         
-         */
+         
         //Eliminar
 
         /*
@@ -52,7 +52,7 @@ public class Cliente {
         String resultadoUpdate = PasaporteRepo.actualizar(pasaporte_1);
         System.out.println(resultadoUpdate);
         
-         */
+        */
         //SelectId
 
         /*
