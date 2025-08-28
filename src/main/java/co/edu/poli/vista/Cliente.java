@@ -20,20 +20,34 @@ public class Cliente {
 
         //Se crean las descripciones de los atributos del pasaporte 
         ArrayList<Ciudad> ciudades = new ArrayList<Ciudad>();
-        ciudades.add(new Ciudad("4", "Tunja"));
+        ciudades.add(new Ciudad("5", "Popayan"));
         Titular titular_1 = new Titular("1078564320", "Juan Ruiz", "13-05-2001");
         Pais pais_1 = new Pais("20", "Peru", ciudades);
 
         //Se crea el objeto pasaporte
-        Pasaporte pasaporte_1 = new Pasaporte("547463", "10-05-2545", titular_1, pais_1);
+        Pasaporte pasaporte_1 = new Pasaporte("a13", "10-05-2545", titular_1, pais_1);
         //CRUD
+
+       //filterid
+       // Buscar pasaportes cuyo ID contenga "A"
+        ArrayList<Pasaporte> resultado = PasaporteRepo.filterId("a"); 
+        // Imprimir resultados
+        for (Pasaporte p : resultado) {
+            System.out.println("ID: " + p.getId()+
+                               ", Fecha: " + p.getFechaExp() +
+                               ", Titular: " + p.getTitular() +
+                               ", Pais: " + p.getPais());
+        }
+       
+        
 
         //Insertar
 
-        /*
         
+        /*
         String insertarPasaporte = PasaporteRepo.insertar(pasaporte_1);
         System.out.println(insertarPasaporte);
+        /*
         
          
         //Eliminar

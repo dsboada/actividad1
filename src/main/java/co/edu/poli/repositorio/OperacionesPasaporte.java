@@ -74,7 +74,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
                 pasaporteBuscado = new Pasaporte(
                         rs.getString("pasaporteid"),
-                        rs.getString("fechaexp"), null, null);          
+                        rs.getString("fechaexp"), null, null);
             }
 
         } catch (SQLException e) {
@@ -134,4 +134,32 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
         return lista;
     }
+
+    @Override
+    public ArrayList<Pasaporte> filterId(String ident) {
+
+        ArrayList<Pasaporte> pasaportes_filtrados = new ArrayList<Pasaporte>();
+        String sql = "SELECT * FROM bdpasaporte WHERE pasaporteid LIKE ?";
+
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, "%" + ident + "%");
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Pasaporte pasaporte = new Pasaporte(
+                        rs.getString("pasaporteid"),
+                        rs.getString("fechaexp"),
+                        null, null);
+
+                pasaportes_filtrados.add(pasaporte);
+            }
+
+        } catch (SQLException e) {
+            System.out.println(" Error al leer: " + e.getMessage());
+        }
+        return pasaportes_filtrados;
+
+    }
+
 }
