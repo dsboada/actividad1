@@ -6,17 +6,16 @@ import co.edu.poli.model.Pais;
 import co.edu.poli.model.Titular;
 import co.edu.poli.model.Visa;
 import java.util.ArrayList;
-import co.edu.poli.repositorio.ConexionSupabase;
-import co.edu.poli.repositorio.Operaciones;
+import co.edu.poli.repositorio.Filtro;
 import co.edu.poli.repositorio.OperacionesPasaporte;
-import java.sql.Connection;
 
 public class Cliente {
 
     public static void main(String[] args) {
 
         //Se crea el repositorio para generar CRUD del pasaporte
-        Operaciones<Pasaporte> PasaporteRepo = new OperacionesPasaporte();
+        //Operaciones<Pasaporte> PasaporteRepo = new OperacionesPasaporte();
+        Filtro<Pasaporte> PasaporteRepo = new OperacionesPasaporte();
 
         //Se crean las descripciones de los atributos del pasaporte 
         ArrayList<Ciudad> ciudades = new ArrayList<Ciudad>();
@@ -28,22 +27,19 @@ public class Cliente {
         Pasaporte pasaporte_1 = new Pasaporte("a13", "10-05-2545", titular_1, pais_1);
         //CRUD
 
-       //filterid
-       // Buscar pasaportes cuyo ID contenga "A"
-        ArrayList<Pasaporte> resultado = PasaporteRepo.filterId("a"); 
-        // Imprimir resultados
+        //filterid
+        // Buscar pasaportes cuyo ID contenga "A"
+        ArrayList<Pasaporte> resultado = PasaporteRepo.selectAll();
+        System.out.println(resultado);
+        /* Imprimir resultados
         for (Pasaporte p : resultado) {
-            System.out.println("ID: " + p.getId()+
-                               ", Fecha: " + p.getFechaExp() +
-                               ", Titular: " + p.getTitular() +
-                               ", Pais: " + p.getPais());
-        }
-       
-        
+            System.out.println("ID: " + p.getId()
+                    + ", Fecha: " + p.getFechaExp()
+                    + ", Titular: " + p.getTitular()
+                    + ", Pais: " + p.getPais());
+        }*/
 
         //Insertar
-
-        
         /*
         String insertarPasaporte = PasaporteRepo.insertar(pasaporte_1);
         System.out.println(insertarPasaporte);
@@ -66,7 +62,7 @@ public class Cliente {
         String resultadoUpdate = PasaporteRepo.actualizar(pasaporte_1);
         System.out.println(resultadoUpdate);
         
-        */
+         */
         //SelectId
 
         /*
@@ -83,7 +79,6 @@ public class Cliente {
         
          */
         //SelectAll
-        
         /*
         
         System.out.println("Lista de pasaportes:");
@@ -93,9 +88,6 @@ public class Cliente {
                     + ", Titular: " + p.getTitular().getNombre());
         }
 
-        */
-
-
-
+         */
     }
 }

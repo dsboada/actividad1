@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class OperacionesPasaporte implements Operaciones<Pasaporte> {
+public class OperacionesPasaporte implements Filtro<Pasaporte>{
 
     @Override
     public String insertar(Pasaporte entidad) {
@@ -151,7 +151,7 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
                         rs.getString("pasaporteid"),
                         rs.getString("fechaexp"),
                         null, null);
-
+ 
                 pasaportes_filtrados.add(pasaporte);
             }
 

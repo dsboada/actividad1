@@ -11,7 +11,7 @@ public interface Operaciones<T> {
     String actualizar(T entidad);
     T selectId(String id);
     ArrayList<T> selectAll();
-    ArrayList<T> filterId(String ident);
+    
     
     
     
