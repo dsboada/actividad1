@@ -10,18 +10,6 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
-         <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>42.2.29.jre7</version>
-            </dependency>
-        
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>42.2.27.jre6</version>
-            </dependency>
-        
             <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>

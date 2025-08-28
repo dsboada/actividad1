@@ -15,6 +15,7 @@ public class ConexionSupabase {
     // Constructor privado para implementar Singleton
     private ConexionSupabase() {
         try {
+            
             // Constantes de conexión
             String URL = "jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres";
             String USER = "postgres.xvmzjfegsbnyuxesymol";

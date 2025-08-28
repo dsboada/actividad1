@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 public class OperacionesPasaporte implements Operaciones<Pasaporte> {
 
     @Override
@@ -115,28 +114,26 @@ public class OperacionesPasaporte implements Operaciones<Pasaporte> {
         String sql = "SELECT * FROM bdpasaporte";
         ArrayList<Pasaporte> lista = new ArrayList<>();
 
-    try (Connection conn = ConexionSupabase.getInstance().getConnection();
-         PreparedStatement pstmt = conn.prepareStatement(sql);
-         ResultSet rs = pstmt.executeQuery()) {
+        try (Connection conn = ConexionSupabase.getInstance().getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
 
-        while (rs.next()) {
-            Titular titular = new Titular(null,rs.getString("titular"), null);            
-            Pais pais = new Pais(null,rs.getString("pais"), null);
+            while (rs.next()) {
+                Titular titular = new Titular(null, rs.getString("titular"), null);
+                Pais pais = new Pais(null, rs.getString("pais"), null);
 
-            Pasaporte pasaporte = new Pasaporte(
-                rs.getString("pasaporteid"),
-                rs.getString("fechaexp"),
-                titular,
-                pais                
-            );
+                Pasaporte pasaporte = new Pasaporte(
+                        rs.getString("pasaporteid"),
+                        rs.getString("fechaexp"),
+                        titular,
+                        pais
+                );
 
-            lista.add(pasaporte);
+                lista.add(pasaporte);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error al listar: " + e.getMessage());
         }
 
-    } catch (SQLException e) {
-        System.out.println("Error al listar: " + e.getMessage());
-    }
-
-    return lista;
+        return lista;
     }
 }
